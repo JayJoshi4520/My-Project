@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="./CSS/style.css" type="text/css">
     <title>Contect</title>
 </head>
 <body>
@@ -20,7 +20,8 @@
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="#">RESUME</a></li>
                     <li><a href="#">ABOUT ME</a></li>
-                    <li><a href="contect.html">CONTECT</a></li>
+                    <li><a href="contact.php">CONTECT</a></li>
+                    <li><a href="login.php">LOGIN</a></li>
                 </ul>
             </nav>
         <div class="burger">
@@ -107,7 +108,7 @@
 
     $result = mysqli_query($con,$sql);
     if ($result) {
-        echo " <script>alert('Thank You For Reaching Us')</script>";
+        echo " <script>alert('Thank You For Reaching Us, I will Reach you Soon ! ')</script>";
     }else {
         echo "<script>alert('Opss Something went wrong !!')</script>";
     }

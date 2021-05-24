@@ -1,0 +1,370 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    background-color: rgb(170, 189, 207);
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    height: 12vh;
+}
+
+
+.logo {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content:left;
+    padding: 5px 10px;
+
+}
+
+.logo img {
+    height: 60%;
+    margin-left:2%;
+}
+
+.burger {
+    flex: 1;
+}
+
+nav {
+    display: flex;
+    flex: 3;
+    align-items: center;
+    justify-content:center;
+    height:100%;
+    width:100%;
+}
+.nav-links {
+    display: flex;
+    width:100%;
+    height:100%;
+    align-items:center;
+    justify-content:space-around;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 500;
+    color: rgb(102, 101, 101);
+    transition: all 0.3s ease-in-out;
+}
+
+.logIn button {
+    font-size:20px;
+}
+
+.nav-links a:hover {
+    color: #432ee6;
+}
+
+.copyright {
+    height: 5%;
+    width: 15%;
+    text-align: right;
+    position:fixed;
+    bottom: 2%;
+    right:2%;
+}
+
+.copyright h3 {
+
+    font-size:10px;
+
+}
+
+.burger {
+    display: none;
+    align-items: center;
+    justify-content:center;
+}
+
+.burger-menu {
+    cursor: pointer;
+    height:50px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #432ee6;
+}
+
+.first-slice {
+    height:7%;
+    width: 50%;
+    background:#fff;
+    margin-bottom: 9%;
+    transition: all 0.3s ease-in-out;
+}
+.second-slice {
+    height:7%;
+    width: 50%;
+    background:#fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.burger-menu.open .first-slice {
+    transform: rotate(45deg) translate(3px,3px);
+}
+
+.burger-menu.open .second-slice {
+    transform: rotate(-45deg) translate(2px, -3px);
+}
+
+main {
+    height:90vh;
+    width:100%;
+}
+.bubble1 {
+    position: absolute;
+    border: none;
+    top: 30%;
+    left:40%;
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right,rgb(224, 236, 247, 0.1),rgba(202, 210, 216, 0.8));
+}
+
+.bubble2 {
+    position: absolute;
+    border: none;
+    top: 75%;
+    left:10%;
+    height: 225px;
+    width: 225px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right,rgb(224, 236, 247, 0.1),rgba(202, 210, 216, 0.8));
+}
+
+.bubble3 {
+    position: absolute;
+    border: none;
+    top: 43%;
+    left:14%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right,rgb(224, 236, 247, 0.1),rgba(202, 210, 216, 0.8))
+}
+
+.bubble4 {
+    position: absolute;
+    border: none;
+    bottom: 4%;
+    right: 14%;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right,rgb(224, 236, 247, 0.1),rgba(202, 210, 216, 0.8))
+}.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    position:absolute;
+    bottom: 3%;
+    left: 3%;
+    height:25%;
+    width:5%;
+}
+
+.icons {
+    display: flex;
+    cursor: pointer;
+    align-items:center;
+    justify-content: center;
+    height:35px;
+    width: 35px;
+    border-radius: 50%;
+    text-align: center;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.icons a{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    height:100%;
+}
+
+.icons img {
+    height: 20px;
+}
+.icons:hover{
+    background-color: #f08c29;
+}
+
+@media screen and (max-width:960px) {
+
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    header {
+        height:10vh;
+    }
+
+    .logo img {
+        height: 60%
+    }
+
+    nav{
+        display:flex;
+        align-items:center;
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        width: 60%;
+        background-color: rgb(224, 236, 247);
+        transform: translateX(100%);
+        transition: all 0.4s ease-in-out;
+    }
+
+    .nav-active {
+        transition:all 0.5s ease-in-out;
+        background: #432ee6;
+        transform: translateX(0%);
+        z-index: 2;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        height:100%;
+        width: 100%;
+    }
+    .nav-links li {
+        opacity: 0;
+        transition: all 1.5s ease-in-out;
+    }
+    .nav-active .nav-links li {
+        opacity: 1;
+    }
+
+    .nav-links a {
+        color: white;
+    }
+    .nav-links a:hover {
+        color: #f08c29;
+    }
+
+    .burger {
+        display:flex;
+        z-index: 2;
+    }
+
+    .burger-menu {
+        margin-left: 30%;
+    }
+
+}
+
+.login {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    top: 25%;
+    left: 22%;
+    height: 55%;
+    width: 55%;
+    background-color: #f08c29;
+    backdrop-filter: blur(2rem);
+    border-radius:10px;
+    background-color: transparent;
+    border: 2px solid rgba(73, 73, 73, 0.4);
+
+}
+
+.text {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    height:30%;
+    width:100%;
+    color:#432ee6;
+}
+
+form {
+    height:70%;
+    width:60%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+form input {
+    height: 14%;
+    width: 94%;
+    outline:none;
+    margin-bottom: 4%;
+    border: none;
+    border-bottom: 2px solid #432ee6;
+    background-color: transparent;
+    padding: 0px 10px;
+    font-family: "Poppins",sans-serif;
+    font-size: 16px;
+}
+
+.password {
+    display: flex;
+    align-items: center;
+    width:100%;
+    height: 14%;
+    margin-top: 2%;
+}
+.password input {
+    height:100%;
+    width: 100%;
+}
+
+.showPassword {
+    cursor: pointer;
+    height:22px;
+    width: 22px;
+    cursor: pointer;
+    margin: 0% 1% 3% 1%;
+}
+
+form button {
+    cursor: pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:14%;
+    width: 27%;
+    margin-top: 5%;
+    margin-left:32%;
+    border:none;
+    border-radius: 4px;
+    background-color:#432ee6;
+    color:white;
+    font-family: "Poppins",sans-serif;
+    letter-spacing:0.5px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: #f08c29;
+    color: rgb(252, 241, 241);
+}

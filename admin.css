@@ -1,0 +1,38 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: "Poppins",sans-serif;
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    align-items: top;
+    justify-content:center;
+    height:100%;
+    width: 100%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-family: "Poppins",sans-serif;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
